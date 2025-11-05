@@ -6,9 +6,9 @@ import java.sql.SQLException;
 
 public class ConnectProvider {
 
-	private static final String URL = "jdbc:postgresql://localhost:5432/shopapp";
-	private static final String login = "postgres";
-	private static final String password = "admin";
+	private static final String URL = "jdbc:postgresql://<DB:Port>/<DB:Name>";
+	private static final String login = "<login>";
+	private static final String password = "<password>";
 	static {
 		try {
 			Class.forName("org.postgresql.Driver");
