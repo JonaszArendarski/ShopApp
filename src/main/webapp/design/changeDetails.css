@@ -1,0 +1,154 @@
+@charset "UTF-8";
+
+:root {
+  --panel-bg: #ffffff;
+  --panel-accent-600: #3b82f6;
+  --panel-accent-500: #60a5fa;
+  --accent: #2563eb;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --panel-height: 64px;
+  --shadow-strong: 0 10px 30px rgba(18,38,63,0.08);
+  --radius: 10px;
+  --container-max: 1200px;
+}
+
+body {
+  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: var(--text);
+  background: linear-gradient(135deg, #f5f7fb 0%, #e9eef8 100%);
+  padding-top: calc(var(--panel-height) + 24px);
+  margin: 0;
+}
+
+/* NAVIGATION BAR */
+.sub-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--panel-height);
+  background: linear-gradient(90deg, rgba(255,255,255,0.985), rgba(255,255,255,0.96));
+  border-bottom: 1px solid rgba(14,30,60,0.04);
+  box-shadow: var(--shadow-strong);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sub-inner {
+  width: 100%;
+  max-width: var(--container-max);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 20px;
+  box-sizing: border-box;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.nav-welcome {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--muted);
+  font-size: 14px;
+  padding: 6px 10px;
+  border-radius: 10px;
+  background: rgba(59,130,246,0.03);
+}
+
+.nav-welcome i {
+  color: var(--panel-accent-600);
+  font-size: 16px;
+}
+
+.nav-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--accent);
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 14px;
+  transition: background 0.14s ease, transform 0.12s ease, color 0.12s ease;
+}
+
+.nav-link:hover {
+  background: rgba(37,99,235,0.08);
+  color: var(--panel-accent-600);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(59,130,246,0.06);
+}
+
+/* ICONS FOR LINKS */
+.nav-link[href*="home"]::before        { content: "\f015"; }
+.nav-link[href*="changePassword"]::before { content: "\f084"; }
+.nav-link[href*="changeAddress"]::before { content: "\f015"; }
+.nav-link[href*="changeMobileNumber"]::before { content: "\f3cd"; }
+.nav-link[href*="changeSecurityQuestion"]::before { content: "\f023"; }
+.nav-link[href*="logout"]::before      { content: "\f2f5"; }
+
+.nav-link::before {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  display: inline-block;
+  margin-right: 4px;
+  font-size: 14px;
+  color: var(--panel-accent-600);
+  width: 18px;
+  text-align: center;
+}
+
+/* MAIN CONTENT */
+.content {
+  max-width: var(--container-max);
+  margin: 100px auto 40px;
+  padding: 20px;
+  text-align: center;
+}
+
+.page-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.page-title i {
+  font-size: 22px;
+  color: var(--panel-accent-600);
+}
+
+@media (max-width: 720px) {
+  .sub-inner {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+    padding: 10px 14px;
+  }
+  .sub-nav {
+    height: auto;
+    position: relative;
+    box-shadow: none;
+  }
+  .nav-left {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .page-title {
+    font-size: 20px;
+  }
+}

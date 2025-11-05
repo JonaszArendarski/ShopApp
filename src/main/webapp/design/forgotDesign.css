@@ -1,0 +1,132 @@
+@charset "UTF-8";
+
+* {
+  box-sizing: border-box;
+}
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background: linear-gradient(135deg, #f5f7fb 0%, #e9eef8 100%);
+  color: #1f2937;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+#container {
+  width: 100%;
+  max-width: 450px;
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(18, 38, 63, 0.08);
+  padding: 28px;
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+
+@media (hover: hover) and (min-width: 480px) {
+  #container:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(18, 38, 63, 0.12);
+  }
+}
+
+
+.singup form {
+  display: grid;
+  gap: 14px;
+}
+
+
+.singup input[type="email"],
+.singup input[type="number"],
+.singup input[type="text"],
+.singup input[type="password"],
+.singup select {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #d7dde8;
+  background: #fbfdff;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 150ms ease, box-shadow 150ms ease;
+}
+
+.singup input::placeholder {
+  color: #9aa5b1;
+}
+.singup input:focus,
+.singup select:focus {
+  border-color: #6b9cff;
+  box-shadow: 0 6px 18px rgba(107, 156, 255, 0.12);
+}
+
+
+.singup input[type="submit"] {
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  border: none;
+  padding: 12px 16px;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #3b82f6, #60a5fa);
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 15px;
+  transition: transform 140ms ease, box-shadow 140ms ease, opacity 140ms ease;
+  box-shadow: 0 8px 18px rgba(59,130,246,0.18);
+}
+.singup input[type="submit"]:hover {
+  opacity: 0.97;
+}
+.singup input[type="submit"]:active {
+  transform: translateY(1px) scale(0.998);
+}
+
+
+.singup h2 {
+  margin: 12px 0 0;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+}
+.singup h2 a {
+  color: #2563eb;
+  text-decoration: none;
+  transition: color 120ms ease;
+}
+.singup h2 a:hover {
+  text-decoration: underline;
+  color: #1d4ed8;
+}
+
+h1 {
+  margin-top: 18px;
+  text-align: center;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.success {
+  color: #065f46;
+  background: rgba(16,185,129,0.06);
+  padding: 10px 12px;
+  border-radius: 8px;
+}
+.error {
+  color: #7f1d1d;
+  background: rgba(239,68,68,0.06);
+  padding: 10px 12px;
+  border-radius: 8px;
+}
+
+@media (max-width: 480px) {
+  #container {
+    padding: 20px;
+    border-radius: 12px;
+  }
+}
