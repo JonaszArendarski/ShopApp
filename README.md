@@ -5,12 +5,17 @@ Aplikacja umożliwia przeglądanie produktów, dodawanie ich do koszyka, składa
 
 ---
 
-## 📸 Zrzuty ekranu
-> - Ekran główny  
+> - Ekran główny
+Widok paneku użytkownika z listą produktów i opcjami swoich zamówień
 >   ![Ekran główny](images/HomePage.png)
-> - Koszyk użytkownika  
+
+> - Koszyk użytkownika
+Widok koszyka użytkownika z opcją finalizacji zamówienia
+
 >   ![Koszyk](images/Cart.png)
-> - Panel administratora  
+> - Panel administratora
+Umożliwia operacje CRUD dodawania , edytowania i usuwania produktów ,zamówień
+
 >   ![Panel admina](images/admin.png)
 
 ---
@@ -26,7 +31,7 @@ Aplikacja umożliwia przeglądanie produktów, dodawanie ich do koszyka, składa
 
 ---
 
-## ⚙️ Stos technologiczny
+## ⚙️ Użyte Technologie
 
 | Warstwa | Technologia |
 |----------|--------------|
